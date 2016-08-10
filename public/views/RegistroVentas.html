@@ -1,0 +1,28 @@
+
+        <section  class="seccion3">
+        <center><h1>Sales record</h1></center>
+            <article class="registros" >
+             <div class="panel-heading"><h1>Total</h1></div>
+                    <table class="table">
+                        <tr ng-repeat="sale in sales">
+                        
+                            <td>
+                                <h3>{{ sale.Total | currency}}   </h3> 
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <h3>Sales total: {{total | currency}}</h3>
+                            </td>
+
+                        </tr>
+                    </table>
+                </div>
+            </article>
+        </section>
+       
+                </header>
+            </body>
+         
+            </html>
+

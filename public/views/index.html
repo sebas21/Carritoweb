@@ -1,0 +1,74 @@
+<!doctype html>
+<html ng-app="MainApp">
+<head>
+  <title>Index</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="/js/jquery.slides.min.js"></script>
+  <script src="/js/slides.js"></script>
+   <link href="/bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+   <link href="css/estilosproductos.css" rel="stylesheet" type="text/css">
+  <script src="/bootstrap/js/bootstrap.js"></script>
+ <link async href="http://fonts.googleapis.com/css?family=Advent%20Pro" data-generated="http://enjoycss.com" rel="stylesheet" type="text/css"/>
+ <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+</head>
+<body>
+
+ <header id="cabezera">    
+  <div class="container-fluid ">
+    <div class="row">
+     
+   <div class="col-xs-10 col-sm-10 col-sm-offset-1 col-md-10 ">
+      <img src="/img/logo.jpg" class="img-responsive">   
+        </div>
+       
+   
+        
+    </div>
+</div>
+
+</header>
+  <!-- Menuu -->
+  <nav>
+  <ul class="nav nav-tabs">
+  <li role="presentation"  ><a  ng-href="#/home" aria-controls="home" role="tab" data-toggle="tab" ><i class="fa fa-home fa-2x"></i>Home</a></li>
+  <li role="presentation" ><a  ng-href="#/productos" aria-controls="profile" role="tab" data-toggle="tab" ><i class="fa fa-shopping-bag fa-2x fa-2x"></i>Products</a></li>
+  <li role="presentation"  > <a  ng-href="#/registro" ><i class="fa fa-file fa-2x" aria-hidden="true"></i>RegistrySales</a></li>
+   <li role="presentation"  > <a  ng-href="#/registrouser" ><i class="fa fa-file fa-2x" aria-hidden="true"></i>RegistryUser</a></li>
+    <li role="presentation"  > <a  ng-href="#/login" ><i class="fa fa-file fa-2x" aria-hidden="true"></i>Login</a></li>
+<li role="presentation" > <a  ng-href="#/carrito" ><i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>Cart <span class="badge">{{cantProductosCarrito}}</span> </a> </li>
+
+</ul>
+  </nav>
+
+
+<div ng-view> </div>
+
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12">
+        <br><br>
+        
+        
+    
+      <p class="text-center">INSTITUCIÓN UNIVERSITARIA DE ENVIGADO<br>ANGÉLICA CASTRO<br>SEBASTIAN LONDOÑO <br>SANTIAGO LONDOÑO</p>
+  
+        <br />     
+    </div>
+  </div>
+</div>
+<script src="/angular/angular.min.js"></script>
+<script src="../angular-route/angular-route.js"></script>
+<script src="https://code.angularjs.org/1.5.5/angular-route.min.js"></script>
+<script src="/angular/app.js"></script>
+<script src="/angular/controller.js"></script>
+<script src="/angular/services.js"></script>
+
+</body>
+</html>

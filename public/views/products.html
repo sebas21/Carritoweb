@@ -1,0 +1,62 @@
+<section id="seccion">
+  <br>
+  <br>
+  <article id="article1">
+        <!-- BUSCAR -->
+        <a>
+            <label class id="filtro">
+                <input type="text" class="button" placeholder="Search ..." ng-model="buscar" >
+            </label>
+        </a>
+        <!-- FILTROS -->  
+        <table id="contenedorfiltros">
+            <tr></tr>
+                <td width="100px" text-align="center">
+                <p>Order by:</p>
+                </td>
+                <td width="80px" text-align="center"><a href="" ng-click="ordenarMayormenor('Nombre')" margin-left="20px">Name</a>
+                </td>
+                <td width="80px" text-align="center"><a href="" ng-click="ordenarMayormenor('Precio')" margin-left="20px">Price</a>
+                </td>
+                <td width="80px" text-align="center"><a href="" ng-click="ordenarMayormenor('-Like')" margin-left="20px">Most pupular</a>
+                </td>
+                <td width="80px" text-align="center"><a href="" ng-click="ordenarMayormenor('-Dislike')" margin-left="30px">Lest popular</a>
+                </td>
+            </tr>
+        </table>
+    </article>
+  <br>
+  <br>
+    <div class="container" id="sha">
+   <div class="row">
+  <div class="col-sm-4 col-md-4 col-md-offset-1" ng-repeat="product in productos | filter:buscar | filter:filtroSeleccionado | orderBy:ordenMayor">
+  
+    <div class="thumbnail">
+      <img id="sha" ng-src="{{product.Imagen}}"  alt="...">
+       <div class="caption">
+       <div class="container-fluid">
+            <div class="row">
+               <div class="col-sm-4 col-md-4 col-md-offset-1 col-sm-offset-1">
+  <p><i class="fa fa-thumbs-o-up fa-2x" aria-hidden="true"></i>
+         <input type="radio" name="x" ng-click="Likes(product)">{{product.Like}}
+                </div>
+                <div class="col-sm-4 col-md-4 col-md-offset-1 col-sm-offset-1">
+                    <i class="fa fa-thumbs-o-down fa-2x" aria-hidden="true"></i>
+                            <input type="radio" name="x" ng-click="Dislikes(product)">{{product.Dislike}}</p>
+                </div>
+              </div>
+            </div>
+         </div>    
+    
+        <h1>{{product.Nombre}}</h1>
+          <p> Price {{ product.Precio | currency}}</p>
+          <btn>
+         <p><a  ng-click="add(product)" class="fa fa-shopping-cart fa-2x" class="btn btn-primary" role="button">ADD </a> </p>
+     
+    </div>
+  </div>
+</div>
+
+</section>
+
+        

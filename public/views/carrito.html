@@ -1,0 +1,37 @@
+<section id="seccion2">
+<center><h1> <p>{{empty}}</p></center>
+
+ <div class="container-fluid"  >
+    <div class="row" ng-repeat="producto in newproducts">
+<div class="col-md-2">
+    <img ng-src="{{producto.Imagen}}"  class="img-responsive">
+</div>
+<div class="col-md-2 ">
+     <h3>{{ producto.Nombre }}</h3>
+       
+</div>
+<div class="col-md-2 "  >
+     <h3>{{ producto.Precio | currency}}</h3>
+</div>
+<div class="col-md-2 " >
+    <h3>Quantity available: {{ producto.Cantidad}}</h3>
+       <p>Quantity:</p>
+       <input type="number" class="btn btn-default"  ng-model="date.nuevaCantidad" min="1" max="{{ producto.Cantidad}}">
+        <button type="button" class="btn btn-primary " ng-click="cantidad(date,producto)">Add</button>
+        <p>{{date.err}}</p>
+        <p>{{date.msj}}</p>
+        <p>{{date.confirm }}{{date.total | currency }}</p>
+</div>
+
+<div class="col-md-2 " >
+
+  <button type="button" class="btn btn-primary " ng-click="confirmar(producto,date)">Confirm</button>
+  
+  <button type="button" class="btn btn-primary " ng-click="borrar(producto,date)">Delete</button>
+  </div>
+
+</div>
+ 
+<p ng-show="Visibility"> SUBTOTAL: {{acumulador | currency}} </p>
+<button type="button" class="btn btn-primary btn-lg" ng-show="Visibility"  ng-click="comprarall()"> Buy</button>
+</section>
